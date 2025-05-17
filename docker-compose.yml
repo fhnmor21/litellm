@@ -6,7 +6,7 @@ services:
       app-network:
         ipv4_address: 172.20.0.100    
     environment:
-        DATABASE_URL: "postgresql://litellm:${NON_ROOT_DB_PASSWORD}@postgres:5432/litellm"
+        DATABASE_URL: "postgresql://litellm:${NON_ROOT_DB_PASSWORD}@172.20.0.90:5432/litellm"
         STORE_MODEL_IN_DB: "True" # allows adding models to proxy via UI
     env_file:
       - .env # Load local .env file
